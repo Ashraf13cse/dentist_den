@@ -39,7 +39,7 @@ class ServiceController extends Controller
     {
         $validated = $request->validate([
             'icon' => 'required',
-            'name' => 'required|min:7',
+            'name' => 'required|min:3',
             'description' => 'required|min:80|max:255',
         ]);
         Service::create($validated);

@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Address</label>
+                    <label class="col-sm-3 col-form-label">Address 1</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" name="address" value="{{$user->address}}"/>
                     </div>
@@ -60,7 +60,8 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Job</label>
+                    <!-- Job becomes Address 2 -->
+                    <label class="col-sm-3 col-form-label">Address 2</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" name="job" value="{{$user->job}}"/>
                     </div>
@@ -68,7 +69,8 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Degree</label>
+                    <!-- Degree becomes visiting time -->
+                    <label class="col-sm-3 col-form-label">Visiting Time</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" name="degree" value="{{$user->degree}}" />
                     </div>
@@ -86,7 +88,8 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Birth Day</label>
+                    <!-- birth day changes to Description -->
+                    <label class="col-sm-3 col-form-label">Description</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" name="birth_day" value="{{ $user->birth_day}}" />
                     </div>

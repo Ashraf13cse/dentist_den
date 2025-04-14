@@ -50,15 +50,18 @@ class QualificationController extends Controller
      */
     public function store(Request $request)
     {
+        
         $validated = $request->validate([
             'title' => 'required|min:3',
-            'association' => 'required|min:3',
+         
             'description' => 'required|min:3',
-            'type'=> 'required',
-            'from'=> 'required|min:4',
-            'to'=> 'required|min:4'
+             'type'=> 'required',
+          
         ]);
-                // dd($validated);
+        $validated['association'] = 'new';
+        $validated['from'] = '2001';
+        $validated['to'] = '2010';
+                
 
         Qualification::create($validated);
         return to_route('admin.qualification.edu')->with('message','New Qualification Added');
@@ -97,19 +100,20 @@ class QualificationController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|min:3',
-            'association' => 'required|min:3',
+           
             'description' => 'required|min:3',
             'type'=> 'required',
-            'from'=> 'required|min:4',
-            'to'=> 'required|min:4'
+            
         ]);
                 // dd($validated);
-
+        $validated['association'] = 'new';
+        $validated['from'] = '2001';
+        $validated['to'] = '2010';
         $qualification->update($validated);
         if($request['type']== 'Education'){
-            return to_route('admin.qualification.edu')->with('message','Education Updated');
+            return to_route('admin.qualification.edu')->with('message','Doctor1 Updated');
         }else{
-            return to_route('admin.qualification.exp')->with('message','Experience Updated');
+            return to_route('admin.qualification.exp')->with('message','Doctor2 Updated');
         }
     }
 

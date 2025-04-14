@@ -6,7 +6,7 @@
                     
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Experience Records</h4>
+                        <h4 class="card-title">Doctor2 Records</h4>
                         <a href="{{ route('admin.qualification.create')}}">
                         <button type="button" class="btn btn-primary btn-fw ">Add New</button>
                         </a>
@@ -17,9 +17,9 @@
                             <tr>
                               <th> # </th>
                               <th> Title </th>
-                              <th> Aassociation </th>
+                              <!-- <th> Aassociation </th> -->
                               <th> Description </th>
-                              <th> From / To </th>
+                              <!-- <th> From / To </th> -->
                               <th> Manage </th>
                             </tr>
                           </thead>
@@ -28,11 +28,11 @@
                             <tr>
                               <td> {{ $experience -> id }} </td>
                               <td>{{ $experience -> title }} </td>
-                              <td>
+                              <!-- <td>
                                 {{ $experience -> association }} 
-                              </td>
+                              </td> -->
                               <td>  {{ substr($experience -> description,0,20) }}  </td>
-                              <td>  {{ $experience -> from }} - {{ $experience -> to }}   </td>
+                              <!-- <td>  {{ $experience -> from }} - {{ $experience -> to }}   </td> -->
                               <td> 
                                 <a href="{{ route('admin.qualification.edit', $experience->id) }}">
                                 <button type="button" class="btn btn-success btn-sm">Edit</button>

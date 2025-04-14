@@ -1,12 +1,12 @@
 @extends('admin.layouts.admin')
 
 @section('content')
-
+<!-- EDUCATION REFERS AS DOCTOR1 -->
                 <div class="col-lg-12 grid-margin stretch-card">
                     
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Education Records</h4>
+                        <h4 class="card-title">Doctor1 Records</h4>
                         <a href="{{ route('admin.qualification.create')}}">
                         <button type="button" class="btn btn-primary btn-fw ">Add New</button>
                         </a>
@@ -17,9 +17,9 @@
                             <tr>
                               <th> # </th>
                               <th> Title </th>
-                              <th> Aassociation </th>
+                              <!-- <th> Aassociation </th> -->
                               <th> Description </th>
-                              <th> From / To </th>
+                              <!-- <th> From / To </th> -->
                               <th> Manage </th>
                             </tr>
                           </thead>
@@ -28,11 +28,11 @@
                             <tr>
                               <td> {{ $education -> id }} </td>
                               <td>{{ $education -> title }} </td>
-                              <td>
+                              <!-- <td>
                                 {{ $education -> association }} 
-                              </td>
+                              </td> -->
                               <td>  {{ substr($education -> description,0,20)  }} ...  </td>
-                              <td>  {{ $education -> from }} - {{ $education -> to }}   </td>
+                              <!-- <td>  {{ $education -> from }} - {{ $education -> to }}   </td> -->
                               <td> 
                                 <a href="{{ route('admin.qualification.edit', $education->id) }}">
                                 <button type="button" class="btn btn-success btn-sm">Edit</button>

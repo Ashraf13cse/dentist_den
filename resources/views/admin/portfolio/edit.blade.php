@@ -36,7 +36,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Url</label>
                 <div class="col-sm-9">
-                  <input type="text" name="project_url" class="form-control" placeholder="enter project url" value="{{$portfolio->project_url}}" required/>
+                  <input type="text" name="project_url" class="form-control" placeholder="enter project url" value="{{$portfolio->project_url}}" />
                 </div>
               </div>
             </div>

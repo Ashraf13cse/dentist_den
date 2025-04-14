@@ -25,10 +25,10 @@
             <label for="exampleInputName1">Title</label>
             <input type="text" class="form-control" id="exampleInputName1" name="title" placeholder="Title" value="{{ $qualification->title }}" required>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="exampleInputEmail3">Association</label>
             <input type="text" class="form-control" id="exampleInputEmail3" name="association" placeholder="Association" value="{{ $qualification->association }}" required>
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="exampleInputPassword4">Description</label>
             <input type="text" class="form-control" id="exampleInputPassword4" name="description" placeholder="Description" value="{{ $qualification->description }}" required>
@@ -36,11 +36,11 @@
           <div class="form-group">
             <label for="exampleSelectGender">Type</label>
             <select class="form-control text-black" id="selectType" name="type")>
-              <option value="Education">Education</option>
-              <option value="Work" {{ ( $qualification->type == 'Work') ? 'selected' : ''}}>Work</option>
+              <option value="Education">Doctor1</option>
+              <option value="Work" {{ ( $qualification->type == 'Work') ? 'selected' : ''}}>Doctor2</option>
             </select>
           </div>
-          <p class="card-description"> Duration </p>
+          <!-- <p class="card-description"> Duration </p>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -58,7 +58,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <button type="submit" class="btn btn-gradient-primary me-2">Update</button>
         </form>
       </div>

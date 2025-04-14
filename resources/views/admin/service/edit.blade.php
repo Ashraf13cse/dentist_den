@@ -26,7 +26,8 @@
           <div class="row">
             <div class="col-md-5">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Icon</label>
+                <!-- Icon used as price -->
+                <label class="col-sm-3 col-form-label">Price</label>
                 <div class="col-sm-9">
                   <input type="text" name="icon" class="form-control" placeholder="enter serivce icon" value="{{ $service->icon }}" required/>
                 </div>

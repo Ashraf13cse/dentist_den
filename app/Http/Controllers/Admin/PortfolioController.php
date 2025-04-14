@@ -42,18 +42,20 @@ class PortfolioController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|min:4',
-            'project_url' => 'required',
+           // 'project_url' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'cat_id' => 'required|exists:categories,id'
         ]);
 
         $portfolio = new Portfolio();
         $portfolio->title = $validated['title'];
-        $portfolio->project_url = $validated['project_url'];
-        $portfolio->cat_id = $request->cat_id;
+       
+       $portfolio->project_url = 'default-url.com';
+       $portfolio->cat_id = $request->cat_id;
 
         if($request->hasfile('image')){
-            $get_file = $request->file('image')->store('images/portfolios');
+            $get_file = $request->file('image')->store('public/images');
+            
             $portfolio->image = $get_file;
         }
 
@@ -85,12 +87,12 @@ class PortfolioController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|min:4',
-            'project_url' => 'required',
+            //'project_url' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
         $portfolio->title = $validated['title'];
-        $portfolio->project_url = $validated['project_url'];
+       
         $portfolio->cat_id = $request->cat_id;
 
         if($request->hasfile('image')){

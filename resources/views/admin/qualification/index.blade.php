@@ -17,9 +17,9 @@
                             <tr>
                               <th> # </th>
                               <th> Title </th>
-                              <th> Aassociation </th>
+                              <!-- <th> Aassociation </th> -->
                               <th> Type </th>
-                              <th> From / To </th>
+                              <!-- <th> From / To </th> -->
                               <th> Manage </th>
                             </tr>
                           </thead>

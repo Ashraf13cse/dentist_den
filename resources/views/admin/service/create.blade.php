@@ -21,11 +21,12 @@
         <form class="forms-sample" method="POST" action="{{ route('admin.service.store') }}">
           @csrf
             <div class="form-group">
-          <p class="card-description"> Service Details <code>find all icons code <a href="https://fontawesome.com/icons/" target="_blank">Click here</a></code></p>
+          <!-- <p class="card-description"> Service Details <code>find all icons code <a href="https://fontawesome.com/icons/" target="_blank">Click here</a></code></p> -->
           <div class="row">
             <div class="col-md-5">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Icon</label>
+                <!-- Icon used as price -->
+                <label class="col-sm-3 col-form-label">Price</label>
                 <div class="col-sm-9">
                   <input type="text" name="icon" class="form-control" placeholder="enter serivce icon" value="{{old('icon')}}" required/>
                 </div>
